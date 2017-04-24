@@ -2,11 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'emoji-component',
-  template: `<h1>Emoji component</h1>`
+  templateUrl: './emoji.html',
+  styleUrls: ['./emoji.css'],
 })
 export class EmojiComponent {
 
   constructor() {
   }
+
+
+
 
 }
