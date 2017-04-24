@@ -1,35 +1,35 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SampleComponent } from './sample.component';
-import { SampleDirective } from './sample.directive';
-import { SamplePipe } from './sample.pipe';
-import { SampleService } from './sample.service';
+import { EmojiComponent } from './emoji.component';
+import { EmojiDirective } from './emoji.directive';
+import { EmojiPipe } from './emoji.pipe';
+import { EmojiService } from './emoji.service';
 
-export * from './sample.component';
-export * from './sample.directive';
-export * from './sample.pipe';
-export * from './sample.service';
+export * from './emoji.component';
+export * from './emoji.directive';
+export * from './emoji.pipe';
+export * from './emoji.service';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
+    EmojiComponent,
+    EmojiDirective,
+    EmojiPipe
   ],
   exports: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
+    EmojiComponent,
+    EmojiDirective,
+    EmojiPipe
   ]
 })
-export class SampleModule {
+export class EmojiModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SampleModule,
-      providers: [SampleService]
+      ngModule: EmojiModule,
+      providers: [EmojiService]
     };
   }
 }

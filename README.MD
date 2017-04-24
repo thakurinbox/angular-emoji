@@ -25,7 +25,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'angular-emoji';
+import { EmojiModule } from 'angular-emoji';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,7 @@ Once your library is imported, you can use its components, directives and pipes 
 <h1>
   {{title}}
 </h1>
-<sampleComponent></sampleComponent>
+<emojiComponent></emojiComponent>
 ```
 
 ## Development
