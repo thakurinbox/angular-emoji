@@ -1,0 +1,26 @@
+{
+  "name": "angular-emoji",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thakurinbox/angular-emoji"
+  },
+  "author": {
+    "name": "Naresh Thakur",
+    "email": "thakurinbox@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thakurinbox/angular-emoji/issues"
+  },
+  "module": "angular-emoji.js",
+  "typings": "angular-emoji.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
