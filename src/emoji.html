@@ -7,7 +7,5 @@
         </div>
     </div>
 
-    <div class="emojiInput"  contentEditable="true" (keyup.enter)="onEnter($event)" (ngModelChange)="onChange($event)" [innerHTML]="input" >
-
-    </div>
+    <textarea class="emojiInput"  contentEditable="true" (keyup.enter)="onEnter($event)" (ngModelChange)="onChange($event)" [innerHTML]="input" ></textarea>
 </div>
