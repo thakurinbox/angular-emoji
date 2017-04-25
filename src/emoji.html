@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <div class="emojiInput"  contentEditable="true" (keyup.enter)="onEnter()" (ngModelChange)="onChange($event)" >
-        {{input}}
+    <div class="emojiInput"  contentEditable="true" (keyup.enter)="onEnter()" (ngModelChange)="onChange($event)" [innerHTML]="input" >
+
     </div>
 </div>
