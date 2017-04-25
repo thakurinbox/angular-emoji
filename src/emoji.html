@@ -1,12 +1,13 @@
 <div class="angular-emoji">
     <div class="emojiPicker">
-        <div *ngFor="let image of allEmojis;" (click)="onEmojiClick(i, image)">
+        <div *ngFor="let image of allEmojis;" (click)="onEmojiClick(image)">
             <span>
               <img src="node_modules/angular-emoji/emoji/png/{{image.code_points.base}}.png" class="app-emogi-image" title="{{image.name}}">
             </span>
         </div>
     </div>
-    <div>
-        <input type="text" (keyup.enter)="onEnter()" value="{{input}}" (ngModelChange)="onChange($event)" />
+
+    <div class="emojiInput"  contentEditable="true" (keyup.enter)="onEnter()" (ngModelChange)="onChange($event)" >
+        {{input}}
     </div>
 </div>

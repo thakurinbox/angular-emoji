@@ -24,7 +24,7 @@ export class EmojiComponent implements OnInit, OnChanges  {
   ngOnInit() {
     this.input = '';
     this.filterEmojis = '';
-    //this.allEmojis = JSON.parse(Emotions);
+    // this.allEmojis = JSON.parse(Emotions);
     this.allEmojis = Object.keys(Emotions).map(key => Emotions[key])
   }
 
@@ -53,20 +53,20 @@ export class EmojiComponent implements OnInit, OnChanges  {
     });
   }
 
-  onEmojiClick(i, e) {
-    this.input = this.input + ' <img src="node_modules/angular-emoji/emoji/png/'+ i + '.png">';
+  onEmojiClick(e) {
+    this.input = this.input + ' <img src="node_modules/angular-emoji/emoji/png/' + e.code_points.base + '.png">';
     this.modelChange.emit(this.input);
     this.popupOpen = false;
   }
 
   onChange(newValue) {
-    this.input = ''; //JSON.parse(Emotions);
+    this.input = ''; // JSON.parse(Emotions);
     this.model = this.input;
     this.modelChange.emit(this.input);
   }
 
     transform(value: any, args: any[] = null): any {
-        return Object.keys(value)//.map(key => value[key]);
+        return Object.keys(value); // .map(key => value[key]);
     }
 
 }
