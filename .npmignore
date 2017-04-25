@@ -2,11 +2,6 @@
 node_modules/*
 npm-debug.log
 
-# TypeScript
-src/*.js
-src/*.map
-src/*.d.ts
-
 # DO NOT IGNORE TYPESCRIPT FILES FOR NPM
 # TypeScript
 # *.js
@@ -35,4 +30,5 @@ Desktop.ini
 **/*.ngfactory.ts
 
 # Library files
+src/*
 build/*
