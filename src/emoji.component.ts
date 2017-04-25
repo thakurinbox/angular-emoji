@@ -12,7 +12,7 @@ export class EmojiComponent implements OnInit, OnChanges  {
 
 
   @Input() popupAnchor = 'top';
-  @Input() onEnter: Function = () => {};
+  @Input() onEnter: Function = () => { console.log('on enter'); };
   @Input() model: any;
   @Output() modelChange: any = new EventEmitter();
 
@@ -60,6 +60,7 @@ export class EmojiComponent implements OnInit, OnChanges  {
   }
 
   onChange(newValue) {
+    console.log('on change!');
     this.input = ''; // JSON.parse(Emotions);
     this.model = this.input;
     this.modelChange.emit(this.input);

@@ -1,3 +1,9 @@
+.emojiPicker{
+    width:400px;
+    height:300px;
+    overflow-y: scroll;
+}
+
 .emojiPicker>div{
     width:17px;
     float: left;
@@ -9,6 +15,11 @@
 
 .emojiInput{
     width:96%;
-    height: 32px;
+    height: 22px;
     border:1px solid #CCC;
+    padding:5px
+}
+
+.emojiInput img{
+    width:20px;
 }
