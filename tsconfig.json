@@ -2,7 +2,7 @@
 // It is NOT used for building the library.
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "./root",
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "rootDir": "./src",

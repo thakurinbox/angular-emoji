@@ -1,6 +1,4 @@
-let path: string = 'assets/emoji/png/';
-
-export const Emotions: any = [
+export const Emotions: any =
     {
         "1f600": {
             "name": "grinning face",
@@ -93378,5 +93376,4 @@ export const Emotions: any = [
                 "woman"
             ]
         }
-    }
-];
+    };
