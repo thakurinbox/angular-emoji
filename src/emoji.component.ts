@@ -12,7 +12,7 @@ export class EmojiComponent implements OnInit, OnChanges  {
 
 
   @Input() popupAnchor = 'top';
-  @Input() onEnter: Function = () => {};
+  @Input() onEnter: Function = ($event) => { this.input = ''; this.modelChange.emit(this.input); $event.preventDefault(); $event.target.blur(); console.log('on enter'); };
   @Input() model: any;
   @Output() modelChange: any = new EventEmitter();
 
@@ -24,11 +24,12 @@ export class EmojiComponent implements OnInit, OnChanges  {
   ngOnInit() {
     this.input = '';
     this.filterEmojis = '';
-    //this.allEmojis = JSON.parse(Emotions);
+    // this.allEmojis = JSON.parse(Emotions);
     this.allEmojis = Object.keys(Emotions).map(key => Emotions[key])
   }
 
   ngOnChanges() {
+    console.log('ngonchange');
     if (this.model !== this.input) {
       this.input = this.model;
     }
@@ -53,20 +54,22 @@ export class EmojiComponent implements OnInit, OnChanges  {
     });
   }
 
-  onEmojiClick(i, e) {
-    this.input = this.input + ' <img src="node_modules/angular-emoji/emoji/png/'+ i + '.png">';
+  onEmojiClick(e) {
+    console.log('onEmojiclick');
+    this.input = this.input + '<img src="node_modules/angular-emoji/emoji/png/' + e.code_points.base + '.png">';
     this.modelChange.emit(this.input);
     this.popupOpen = false;
   }
 
   onChange(newValue) {
-    this.input = ''; //JSON.parse(Emotions);
+    console.log('on change!');
+    this.input = ''; // JSON.parse(Emotions);
     this.model = this.input;
     this.modelChange.emit(this.input);
   }
 
     transform(value: any, args: any[] = null): any {
-        return Object.keys(value)//.map(key => value[key]);
+        return Object.keys(value); // .map(key => value[key]);
     }
 
 }
