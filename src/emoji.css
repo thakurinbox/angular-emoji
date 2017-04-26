@@ -9,6 +9,13 @@
     float: left;
 }
 
+.emojiPicker>div>span{
+    display:inline-block;
+    width:17px;
+    float: left;
+}
+
+
 .emojiPicker div img{
     width:15px;
 }
