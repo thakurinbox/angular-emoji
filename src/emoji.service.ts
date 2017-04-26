@@ -15,7 +15,7 @@ export class EmojiService {
       }
     }else if(filterBy == "image") {
       for (let key in this.emotions) {
-        let re = new RegExp(key + ".png", 'ig');
+        let re = new RegExp('<img src="node_modules/angular-emoji/emoji/png/' + key + '.png">', 'ig');
         value = value.replace(re, this.emotions[key].shortname);
       }
     }else{
