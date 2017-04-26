@@ -12,7 +12,7 @@ export class EmojiComponent implements OnInit, OnChanges  {
 
 
   @Input() popupAnchor = 'top';
-  @Input() onEnter: Function = ($event) => { this.input = ''; $event.preventDefault(); $event.target.blur(); console.log('on enter'); };
+  @Input() onEnter: Function = ($event) => { this.input = ''; this.modelChange.emit(this.input); $event.preventDefault(); $event.target.blur(); console.log('on enter'); };
   @Input() model: any;
   @Output() modelChange: any = new EventEmitter();
 
