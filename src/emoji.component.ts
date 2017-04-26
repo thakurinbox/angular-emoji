@@ -29,6 +29,7 @@ export class EmojiComponent implements OnInit, OnChanges  {
   }
 
   ngOnChanges() {
+    console.log('ngonchange');
     if (this.model !== this.input) {
       this.input = this.model;
     }
@@ -55,7 +56,7 @@ export class EmojiComponent implements OnInit, OnChanges  {
 
   onEmojiClick(e) {
     console.log('onEmojiclick');
-    this.input = this.input + ' <img src="node_modules/angular-emoji/emoji/png/' + e.code_points.base + '.png">';
+    this.input = this.input + '<img src="node_modules/angular-emoji/emoji/png/' + e.code_points.base + '.png">';
     this.modelChange.emit(this.input);
     this.popupOpen = false;
   }
