@@ -30,6 +30,8 @@ export class EmojiComponent implements OnInit, OnChanges  {
     // remove extra lines
       console.log("outer text", $event.target.outerText);
       console.log("inner Text", $event.target.innerText);
+      console.log("outer html", $event.target.outerHTML);
+      console.log("inner html", $event.target.innerHTML);
     var text = $event.target.outerText.replace(/(\r\n|\n|\r)/gm,"");
     console.log("text",text);
     //$event.target.innerText = '';
