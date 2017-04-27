@@ -21,7 +21,12 @@ export class EmojiComponent implements OnInit, OnChanges  {
   allEmojis: Array<any>;
   popupOpen: boolean = false;
 
-  onEnter(){
+  onEnter($event){
+    $event.preventDefault();
+    $event.target.blur();
+    // remove extra lines
+    let text = $event.target.outerText.replace(/(\r\n|\n|\r)/gm,"");
+    console.log("text",text);
     this.input = '';
    // this.modelChange.emit(this.input);
     console.log('on enter');
