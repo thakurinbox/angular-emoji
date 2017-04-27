@@ -27,7 +27,7 @@ export class EmojiComponent implements OnInit, OnChanges  {
     // remove extra lines
     let text = $event.target.outerText.replace(/(\r\n|\n|\r)/gm,"");
     console.log("text",text);
-    $event.target.innerText = '';
+    //$event.target.innerText = '';
     this.input = '';
    // this.modelChange.emit(this.input);
     console.log('on enter');
