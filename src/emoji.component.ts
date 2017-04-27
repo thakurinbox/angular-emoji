@@ -1,14 +1,16 @@
 import {Component, OnInit, OnChanges, Input, Output, EventEmitter, Pipe, NgZone} from '@angular/core';
 import { Emotions } from "./default-emotion";
+import { EmojiService } from "./emoji.service"
 
 @Component({
   selector: 'emoji-input',
   templateUrl: './emoji.html',
   styleUrls: ['./emoji.css'],
+    providers: [EmojiService]
 })
 export class EmojiComponent implements OnInit, OnChanges  {
 
-  constructor() {}
+  constructor(public emojiService: EmojiService) {}
 
 
  /* @Input() popupAnchor = 'top';
@@ -20,17 +22,21 @@ export class EmojiComponent implements OnInit, OnChanges  {
   filterEmojis: string;
   allEmojis: Array<any>;
   popupOpen: boolean = false;
+  chatText;
 
   onEnter($event){
     $event.preventDefault();
     $event.target.blur();
     // remove extra lines
-    let text = $event.target.outerText.replace(/(\r\n|\n|\r)/gm,"");
+      console.log("outer text", $event.target.outerText);
+      console.log("inner Text", $event.target.innerText);
+    var text = $event.target.outerText.replace(/(\r\n|\n|\r)/gm,"");
     console.log("text",text);
     //$event.target.innerText = '';
     this.input = '';
    // this.modelChange.emit(this.input);
     console.log('on enter');
+    this.emojiService.setChatText(text);
   }
 
   ngOnInit() {
@@ -82,7 +88,9 @@ export class EmojiComponent implements OnInit, OnChanges  {
   }
 
     transform(value: any, args: any[] = null): any {
-        return Object.keys(value); // .map(key => value[key]);
+
+
+        return this.chatText; // .map(key => value[key]);
     }
 
 }

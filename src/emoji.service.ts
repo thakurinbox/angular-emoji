@@ -6,7 +6,7 @@ export class EmojiService {
 
   emotions;
   constructor() { this.emotions = Emotions; }
-
+  chatText;
   transform(value: any, args: any[] = null, filterBy: any = null) {
     if(filterBy == "unicode"){
       for (let key in this.emotions) {
@@ -26,5 +26,10 @@ export class EmojiService {
     }
     return value;
   }
+
+  setChatText(text){
+    this.chatText = text;
+  }
+
 
 }
