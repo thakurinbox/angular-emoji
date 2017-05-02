@@ -1,6 +1,6 @@
 # angular-emoji
 
-## Installation - This npm is under development Please do not use it till 1st May 2017
+## Installation - Sorry for the trouble, this npm is still under development. I got busy with some other work. Will try to complete it as soon as possible.
 
 To install this library, run:
 
