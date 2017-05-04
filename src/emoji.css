@@ -1,6 +1,6 @@
 .emojiPicker{
     width:400px;
-    height:300px;
+    height:30px;
     overflow-y: scroll;
 }
 
@@ -24,7 +24,8 @@
     width:96%;
     height: 22px;
     border:1px solid #CCC;
-    padding:5px
+    padding:5px;
+    display: inline-block;
 }
 
 .emojiInput img{
