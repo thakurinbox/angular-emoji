@@ -1,6 +1,6 @@
 {
   "name": "angular-emoji",
-  "version": "0.1.25",
+  "version": "0.1.26",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
