@@ -2,7 +2,7 @@
     <div class="emojiPicker">
         <div *ngFor="let image of allEmojis;" (click)="onEmojiClick(image)">
             <span>
-              <img src="node_modules/angular-emoji/emoji/png/{{image.code_points.base}}.png" class="app-emoji-image" title="{{image.name}}">
+              <img src="https://github.com/thakurinbox/angular-emoji/tree/master/emoji/png/{{image.code_points.base}}.png" class="app-emoji-image" title="{{image.name}}">
             </span>
         </div>
     </div>
