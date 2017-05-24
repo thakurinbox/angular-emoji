@@ -6,5 +6,6 @@
             </span>
         </div>
     </div>
-    <div class="emojiInput"  contentEditable="true" (keyup.enter)="onEnter($event)" (ngModelChange)="onChange($event)" [innerHTML]="input" ></div>
+    <!--<div class="emojiInput"  contentEditable="true" (keyup)="onChange($event)" (keyup.enter)="onEnter($event)" (ngModelChange)="onChange($event)" [innerHTML]="input" ></div>-->
+    <div class="emojiInput"  contentEditable="true" (keyup)="onChange($event)" (keyup.enter)="onEnter($event)" [innerHTML]="input" ></div>
 </div>

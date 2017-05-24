@@ -82,9 +82,9 @@ export class EmojiComponent implements OnInit, OnChanges  {
     this.popupOpen = false;
   }
 
-  onChange(newValue) {
+  onChange($event) {
     console.log('on change!');
-    this.input = ''; // JSON.parse(Emotions);
+    this.input = $event.target.innerHTML; // JSON.parse(Emotions);
    // this.model = this.input;
     //this.modelChange.emit(this.input);
   }
