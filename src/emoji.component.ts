@@ -21,7 +21,6 @@ export class EmojiComponent implements OnInit, OnChanges  {
   input: string;
   filterEmojis: string;
   allEmojis: Array<any>;
-  symbols: Array<any>;
   popupOpen: boolean = false;
   chatText;
 
@@ -44,6 +43,16 @@ export class EmojiComponent implements OnInit, OnChanges  {
 
   category = [];
 
+  symbols = [];
+  nature = [];
+  objects = [];
+  people = [];
+  food = [];
+  activity = [];
+  regional = [];
+  travel = [];
+
+
   ngOnInit() {
     this.input = '';
     this.filterEmojis = '';
@@ -51,19 +60,24 @@ export class EmojiComponent implements OnInit, OnChanges  {
     this.allEmojis = Object.keys(Emotions).map(key => Emotions[key]);
 
     for(var i = 0; i < this.allEmojis.length; i++){
-
-      this.category[this.allEmojis[i].category] = i;
-
       if(this.allEmojis[i].category == "symbols"){
-
+          this.symbols.push(this.allEmojis[i]);
       }else if( this.allEmojis[i].category ==  "nature"){
-
+        this.nature.push(this.allEmojis[i]);
       }else if(this.allEmojis[i].category == "objects"){
-
+        this.objects.push(this.allEmojis[i]);
+      }else if(this.allEmojis[i].category == "people"){
+        this.people.push(this.allEmojis[i]);
+      }else if(this.allEmojis[i].category == "food"){
+        this.food.push(this.allEmojis[i]);
+      }else if(this.allEmojis[i].category == "activity"){
+        this.activity.push(this.allEmojis[i]);
+      }else if(this.allEmojis[i].category == "regional"){
+        this.regional.push(this.allEmojis[i]);
+      }else if(this.allEmojis[i].category == "travel"){
+        this.travel.push(this.allEmojis[i]);
       }
-
     }
-    console.log("category",  this.category);
 
   }
 
