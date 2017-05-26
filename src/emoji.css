@@ -31,3 +31,27 @@
 .emojiInput img{
     width:20px;
 }
+
+
+.emojiPicker[_ngcontent-c1] > div[_ngcontent-c1] {
+    width: 24px;
+    float: left;
+    height: 24px;
+    text-align: center;
+    padding: 5px;
+}
+.emojiPicker[_ngcontent-c1] > div[_ngcontent-c1] > span[_ngcontent-c1] {float: none;}
+
+.emojiPicker[_ngcontent-c1] > div[_ngcontent-c1] {
+    width: 24px;
+    float: left;
+    height: 24px;
+    text-align: center;
+}
+
+.emojiPicker[_ngcontent-c1] {
+    width: auto;
+    height: 90px !important;
+    overflow: auto !important;
+}
+
