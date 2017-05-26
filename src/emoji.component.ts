@@ -52,10 +52,10 @@ export class EmojiComponent implements OnInit, OnChanges  {
 
     for(var i = 0; i < this.allEmojis.length; i++){
 
-      this.category[this.allEmojis[i].category].push(this.allEmojis[i]);
+      this.category[this.allEmojis[i].category] = i;
 
       if(this.allEmojis[i].category == "symbols"){
-        this.symbols.push(this.allEmojis[i]);
+
       }else if( this.allEmojis[i].category ==  "nature"){
 
       }else if(this.allEmojis[i].category == "objects"){

@@ -40,9 +40,9 @@
     text-align: center;
     padding: 5px;
 }
-.emojiPicker[_ngcontent-c1] > div[_ngcontent-c1] > span[_ngcontent-c1] {float: none;}
+.emojiPicker > div > span {float: none;}
 
-.emojiPicker[_ngcontent-c1] > div[_ngcontent-c1] {
+.emojiPicker > div {
     width: 24px;
     float: left;
     height: 24px;
