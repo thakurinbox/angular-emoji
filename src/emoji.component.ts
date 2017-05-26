@@ -21,6 +21,7 @@ export class EmojiComponent implements OnInit, OnChanges  {
   input: string;
   filterEmojis: string;
   allEmojis: Array<any>;
+  symbols: Array<any>;
   popupOpen: boolean = false;
   chatText;
 
@@ -41,11 +42,29 @@ export class EmojiComponent implements OnInit, OnChanges  {
     this.emojiService.setChatText(text);
   }
 
+  category = [];
+
   ngOnInit() {
     this.input = '';
     this.filterEmojis = '';
     // this.allEmojis = JSON.parse(Emotions);
-    this.allEmojis = Object.keys(Emotions).map(key => Emotions[key])
+    this.allEmojis = Object.keys(Emotions).map(key => Emotions[key]);
+
+    for(var i = 0; i < this.allEmojis.length; i++){
+
+      this.category[this.allEmojis[i].category].push(this.allEmojis[i]);
+
+      if(this.allEmojis[i].category == "symbols"){
+        this.symbols.push(this.allEmojis[i]);
+      }else if( this.allEmojis[i].category ==  "nature"){
+
+      }else if(this.allEmojis[i].category == "objects"){
+
+      }
+
+    }
+    console.log("category",  this.category);
+
   }
 
   ngOnChanges() {
@@ -90,8 +109,6 @@ export class EmojiComponent implements OnInit, OnChanges  {
   }
 
     transform(value: any, args: any[] = null): any {
-
-
         return this.chatText; // .map(key => value[key]);
     }
 
