@@ -53,6 +53,9 @@ Once your library is imported, you can use its components, directives and pipes 
 <emoji-input></emoji-input>
 ```
 
+## Placing emoji icons
+
+Copy emoji icons from /node_modules/angular-emoji/emoji and add to your project at /src/assets/images/emoji and run you angular build
 
 
 ## License
