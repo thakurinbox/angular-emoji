@@ -1,5 +1,7 @@
 # angular-emoji
 
+This npm is for angular 2+. You can use it for any chat module. By default its using shortcode of emoji recognition. You need to make some tweaks based on your requirement.
+
 ## Installation
 
 To install this library, run:
