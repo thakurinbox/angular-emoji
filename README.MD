@@ -1,6 +1,6 @@
 # angular-emoji
 
-## Installation - Sorry for the trouble, this npm is still under development. I got busy with some other work. Will try to complete it as soon as possible.
+## Installation
 
 To install this library, run:
 
